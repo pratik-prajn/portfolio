@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+    font-family: 'Space Mono', monospace;
+    /*font-size: clamp(3rem, 10vw, 10rem);*/
+ 
+   padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  }
+  body {
+
+   
+
+    
+
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
+  }
+
+
+
+
+
+
+
+
+.content{
+    margin: 50px;
+    display: flex;
+    line-height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    font-family:'Space Mono', monospace;
+    align-items: center;
+    color: aliceblue;
+}
+
+canvas{
+    margin: 30px;
+    border:3px solid rgb(255, 255, 255);
+    width: 700px;
+    height: 460px;
+}

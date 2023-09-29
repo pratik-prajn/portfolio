@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   <title> All Navigation Menu Hover Animation | CodingLab </title> 
+    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="prolist.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   </head>
+<body>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="center"><a href="#">Projects</a></li>
+        <li class="upward"><a href="#">About me</a></li>
+        <li class="forward"><a href="#">Connect</a></li>
+      </ul>
+
+
+<!--<div class="container">
+
+
+
+    <h1 data-value="PRATIK">PRATIK</h1>
+</div>--><div><h1 data-value="PRATIK">PRATIK</h1>
+
+
+</div>
+
+    <!---->
+
+<div class="RightToLeft">
+   
+     <marquee behavior="" direction="right" scrollamount="14">
+        <ul class="rt">
+          <li>Lorem ipsum dolor sit amet consectetur</li>
+        
+            <li>Lorem ipsum dolor sit amet consectetur</li>
+          <li>Lorem ipsum dolor sit amet consectetur</li>
+           <li>Lorem ipsum dolor sit amet consectetur</li>
+           <li>Lorem ipsum dolor sit amet consectetur</li>
+            <li>Lorem ipsum dolor sit amet consectetur</li>
+          <li>Lorem ipsum dolor sit amet consectetur</li>
+           <li>Lorem ipsum dolor sit amet consectetur</li>
+          </ul></marquee>
+   
+ </div>
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+<!--
+<div class="page2">
+
+    <h1 data-value="PROJECTS">PROJECTS</h1>
+         <section>
+             <div class="container">
+                 <div class="card">
+                     <div class="content">
+                         <div class="imgBx">
+                             <img src="images.png">
+                         </div>
+                         <div class="contentBx">
+                             <h3>PAPER</h3>
+                         </div>
+                     </div>
+                     <ul class="sci">
+                         <li>
+                             <a href="">Game Development</a>
+                         </li>
+                       
+                     </ul>
+                 </div>
+                 <div class="card">
+                     <div class="content">
+                         <div class="imgBx">
+                             <img src="oo.png">
+                         </div>
+                         <div class="contentBx">
+                             <h3>PORTFOLIO</h3>
+                         </div>
+                     </div>
+                     <ul class="sci">
+                         <li>
+                             <a href="">Web Development</a>
+                         </li>
+         
+                     </ul>
+                 </div>
+                 <div class="card">
+                     <div class="content">
+                         <div class="imgBx">
+                             <img src="download.png">
+                         </div>
+                         <div class="contentBx">
+                             <h3>SIGN LANGUAGE</h3>
+                         </div>
+                     </div>
+                     <ul class="sci">
+                         <li>
+                             <a href="">AI/ML</a>
+                         </li>
+                       
+                     </ul>
+                 </div>
+             </div>
+         </section>
+        </div>
+
+  </div>-->
+
+    <script>const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        let interval = null;
+        
+        document.querySelector("h1").onmouseover = event => {  
+          let iteration = 0;
+          
+          clearInterval(interval);
+          
+          interval = setInterval(() => {
+            event.target.innerText = event.target.innerText
+              .split("")
+              .map((letter, index) => {
+                if(index < iteration) {
+                  return event.target.dataset.value[index];
+                }
+              
+                return letters[Math.floor(Math.random() * 26)]
+              })
+              .join("");
+            
+            if(iteration >= event.target.dataset.value.length){ 
+              clearInterval(interval);
+            }
+            
+            iteration += 1 / 3;
+          }, 30);
+        }</script>
+
+</body>
+</html>
