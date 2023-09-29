@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="stylesheet" href="drawing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <h1>SEND US MESSAGE</h1>
+        
+        <canvas id="canvas" width="560" height="360"></canvas>
+    </div>
+
+
+
+
+
+    <script>
+        var x=0;
+        var y=0;
+        var isD=false;
+        const cnv=document.getElementById('canvas');
+        const ctx=cnv.getContext('2d');
+
+
+        cnv.addEventListener("mousedown",(e)=>{
+            x=e.offsetX;
+            y=e.offsetY;
+            isD=true;
+        });
+
+
+        cnv.addEventListener("mousemove",(e)=>{
+            if(isD===true)
+            {
+              drawLine(x,y,e.offsetX,e.offsetY);
+              x=e.offsetX;
+              y=e.offsetY;
+            }
+        });
+
+        cnv.addEventListener("mouseup",(e)=>{
+            if(isD===true)
+            {
+              drawLine(x,y,e.offsetX,e.offsetY);
+              x=0;
+              y=0;
+              isD=false;
+            }
+        });
+
+        function drawing(x1,y1,x2,y2)
+        {
+            ctx.beginPath();
+            ctx.strokeStyle="white";
+            cts
+        }
+
+    </script>
+</body>
+</html>
